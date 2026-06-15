@@ -6,7 +6,7 @@ from pyspark.sql.types import (StructType, StructField, StringType, LongType, Ar
 # Iniciando a sessão spark
 spark = SparkSession.builder.appName("Analise de Pedidos Legitimos Recusados").getOrCreate()
 
-# Definido schema de forma explícita
+# (Pagamentos) Definido schema de forma explícita
 
 print("Definindo schema do dataset pagamentos")
 
@@ -27,10 +27,36 @@ schema_pagamentos = StructType([
 print("Abrindo o dataframe de pagamentos")
 
 pagamentos = spark.read \
-                  .schema(schema_pagamentos) \
                   .option("compression", "gzip") \
-                  .json("./trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos")
+                  .json("./trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos", schema=schema_pagamentos)
 
 pagamentos.printSchema()
 
-pagamentos.show(5, truncate=False)
+pagamentos.show(10, truncate=False)
+
+# (Pedidos) Definido schema de forma explícita
+
+print("Definindo schema do dataset pedidos")
+
+schema_pedidos = StructType([
+                StructField("id_pedido", StringType(), True),
+                StructField("produto", StringType(), True),
+                StructField("valor_unitario", FloatType(), True),
+                StructField("quantidade", LongType(), True),
+                StructField("data_criacao", TimestampType(), True),
+                StructField("uf", StringType(), True),
+                StructField("id_cliente", LongType(), True)
+        ])
+
+# (Pedidos) Realizando a leitura dos arquivos json no formado gzip
+
+print("Abrindo o dataframe de pagamentos")
+
+pedidos = spark.read \
+               .schema(schema_pedidos) \
+               .option("compression", "gzip") \
+               .csv("./trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/data-csv-pedidos/data/pedidos", header=True, schema=schema_pedidos, sep=";")
+               
+pedidos.printSchema()
+
+pedidos.show(10, truncate=False)
