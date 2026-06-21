@@ -1,5 +1,8 @@
+import logging
 from io_utils.data_handler import DataHandler
 from processing.transformations import Transformation
+
+logger = logging.getLogger(__name__)
 
 class Pipeline:
     """
@@ -13,14 +16,14 @@ class Pipeline:
         """
         Executa o pipeline completo: carga, transformação e salvamento.
         """
-        print("Pipeline iniciado...")
+        logger.info("Pipeline iniciado...")
         
         # Definindo variáveis para capturar as configurações do yaml (pagamentos)
         path_pagamentos = config['paths']['pagamentos']
         compression_pagamentos = config['file_options']['pagamentos_json']['compression']
         
-        print(f"""Obtido os seguintes paramentros de pagamentos:
-        - path: {path_pagamentos}
+        logger.info(f"""Obtido os seguintes paramentros de pagamentos:
+        - path:        {path_pagamentos}
         - compression: {compression_pagamentos}
         """)
         

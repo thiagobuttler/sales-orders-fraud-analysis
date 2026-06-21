@@ -1,5 +1,8 @@
+import logging
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.types import (StructType, StructField, StringType, LongType, ArrayType, DateType, FloatType, TimestampType, BooleanType)
+
+logger = logging.getLogger(__name__)
 
 class DataHandler:
     """
@@ -37,11 +40,13 @@ class DataHandler:
     
     def load_pagamentos(self, path: str, compression: str) -> DataFrame:
         "Carrega o dataframe de pagamentos a partir de arquivos JSON"
+        logger.info("Carregando o dataframe pagamentos...")
         schema = self._get_schema_pagamentos()
         return self.spark.read.option("compression", compression).json(path, schema=schema)
     
     def load_pedidos(self, path: str, compression: str, header:bool, sep: str) -> DataFrame:
         "Carrega o dataframe de pedidos a partir de arquivos CSV"
+        logger.info("Carregando o dataframe pedidos...")
         schema = self._get_schema_pedidos()
         return self.spark.read.option("compression", compression).csv(path, header=header, schema=schema, sep=sep)
     
@@ -52,4 +57,4 @@ class DataHandler:
         :param path: Caminho de destino.
         """
         df.write.mode("overwrite").parquet(path)
-        print(f"Dados salvos com sucesso em: {path}")
+        logger.info(f"Dados salvos com sucesso em: {path}")
