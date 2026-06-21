@@ -40,16 +40,18 @@ class DataHandler:
     
     def load_pagamentos(self, path: str, compression: str) -> DataFrame:
         "Carrega o dataframe de pagamentos a partir de arquivos JSON"
-        logger.info("Carregando o dataframe pagamentos...")
         schema = self._get_schema_pagamentos()
-        return self.spark.read.option("compression", compression).json(path, schema=schema)
+        df_pagamentos = self.spark.read.option("compression", compression).json(path, schema=schema)
+        logger.info(f"Dataframe pagamentos carregado. | Registros: {df_pagamentos.count()}")
+        return df_pagamentos
     
     def load_pedidos(self, path: str, compression: str, header:bool, sep: str) -> DataFrame:
         "Carrega o dataframe de pedidos a partir de arquivos CSV"
-        logger.info("Carregando o dataframe pedidos...")
         schema = self._get_schema_pedidos()
-        return self.spark.read.option("compression", compression).csv(path, header=header, schema=schema, sep=sep)
-    
+        df_pedidos = self.spark.read.option("compression", compression).csv(path, header=header, schema=schema, sep=sep)
+        logger.info(f"Dataframe pedidos carregado. | Registros: {df_pedidos.count()}")
+        return df_pedidos
+        
     def write_parquet(self, df: DataFrame, path: str):
         """Salva o DataFrame em formato Parquet, sobrescrevendo se já existir.
         
