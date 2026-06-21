@@ -4,6 +4,7 @@ from pyspark.sql import functions as F
 from pyspark.sql.types import (StructType, StructField, StringType, LongType, ArrayType, DateType, FloatType, TimestampType, BooleanType)
 from config.settings import carregar_config
 from session.spark_session import SparkSessionManager
+from io_utils.data_handler import DataHandler
 
 # Carregando configurações do arquivo yaml
 config = carregar_config()
@@ -14,28 +15,14 @@ print(f"Obtido o app name: {app_name}")
 
 # Iniciando a sessão spark
 spark = SparkSessionManager.get_spark_session(app_name=app_name)
+
 print(f"""Spark Session iniciada:
 - SparkSession: {spark}
 - AppName: {app_name}
         """)
-# (Pagamentos) Definido schema de forma explícita
-
-print("Definindo schema do dataset pagamentos")
-
-schema_pagamentos = StructType([
-        StructField("id_pedido", StringType(), True),
-        StructField("forma_pagamento", StringType(), True),
-        StructField("valor_pagamento", FloatType(), True),
-        StructField("status", BooleanType(), True),
-        StructField("data_processamento", TimestampType(), True),
-        StructField("avaliacao_fraude", StructType([
-                StructField("fraude", BooleanType(), True),
-                StructField("score", FloatType(), True)
-            ]), True)
-    ])
-
-# (Pagamentos) Realizando a leitura dos arquivos json no formado gzip
-print("Abrindo o dataframe de pagamentos")
+        
+# Criando uma instância da classe data handler
+dh = DataHandler(spark)
 
 # Definindo variáveis para capturar as configurações do yaml
 path_pagamentos = config['paths']['pagamentos']
@@ -46,27 +33,8 @@ print(f"""Obtido os seguintes paramentros de pagamentos:
 - compression: {compression_pagamentos}
 """)
 
-pagamentos = spark.read \
-                  .option("compression", compression_pagamentos) \
-                  .json(path_pagamentos, schema=schema_pagamentos)
-
-# (Pedidos) Definido schema de forma explícita
-
-print("Definindo schema do dataset pedidos")
-
-schema_pedidos = StructType([
-                StructField("id_pedido", StringType(), True),
-                StructField("produto", StringType(), True),
-                StructField("valor_unitario", FloatType(), True),
-                StructField("quantidade", LongType(), True),
-                StructField("data_criacao", TimestampType(), True),
-                StructField("uf", StringType(), True),
-                StructField("id_cliente", LongType(), True)
-        ])
-
-# (Pedidos) Realizando a leitura dos arquivos json no formado gzip
-
 print("Abrindo o dataframe de pagamentos")
+pagamentos = dh.load_pagamentos(path = path_pagamentos, compression = compression_pagamentos)
 
 path_pedidos = config['paths']['pedidos']
 compression_pedidos = config['file_options']['pedidos_csv']['compression']
@@ -80,10 +48,8 @@ print(f"""Obtido os seguintes parametros de pedidos:
 - separator_pedidos = {separator_pedidos}
 """)
 
-pedidos = spark.read \
-               .schema(schema_pedidos) \
-               .option("compression", compression_pedidos) \
-               .csv(path_pedidos, header=header_pedidos, schema=schema_pedidos, sep=separator_pedidos)
+print("Abrindo o dataframe de pedidos")
+pedidos = dh.load_pedidos(path = path_pedidos, compression = compression_pedidos, header = header_pedidos, sep = separator_pedidos)
 
 pagamentos.show(10, truncate=False)
 pedidos.show(10, truncate=False)
