@@ -34,6 +34,12 @@ class Transformation:
     
     def filter_pedidos_2025(self, pagamentos_pedidos_df: DataFrame) -> DataFrame:
         "Filtra apenas os pedidos realizados no ano de 2025"
-        return pagamentos_pedidos_df.filter(pagamentos_pedidos_df.data_criacao == 2025)
+        return pagamentos_pedidos_df.filter(F.year(F.col("data_criacao")) == 2025)
     
-    
+    def orderBy_pagamentos_pedidos(self, pagamentos_pedidos_df: DataFrame) -> DataFrame:
+        "Ordenação por UF, forma de pagamento e data de criação"
+        return pagamentos_pedidos_df.orderBy(
+                F.asc("uf"),
+                F.asc("forma_pagamento"),
+                F.asc("data_criacao")
+            )

@@ -45,3 +45,11 @@ class DataHandler:
         schema = self._get_schema_pedidos()
         return self.spark.read.option("compression", compression).csv(path, header=header, schema=schema, sep=sep)
     
+    def write_parquet(self, df: DataFrame, path: str):
+        """Salva o DataFrame em formato Parquet, sobrescrevendo se já existir.
+        
+        :param df: DataFrame a ser salvo.
+        :param path: Caminho de destino.
+        """
+        df.write.mode("overwrite").parquet(path)
+        print(f"Dados salvos com sucesso em: {path}")
