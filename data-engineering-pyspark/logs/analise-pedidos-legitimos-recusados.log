@@ -68,3 +68,60 @@
 2026-06-21 23:07:57 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
 2026-06-21 23:07:58 - __main__ - INFO - Sessão spark finalizada.
 2026-06-21 23:07:58 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-23 14:12:37 - root - INFO - Logging configurado.
+2026-06-23 14:12:37 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-23 14:12:37 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-23 14:12:48 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-23 14:12:53 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-23 14:12:54 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-23 14:12:57 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-23 14:12:59 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-23 14:13:00 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-23 14:13:02 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-23 14:13:02 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-23 14:13:02 - pipeline.pipeline - INFO - Obtido o path de saída: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-23 14:13:06 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-23 14:13:06 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-23 14:13:07 - __main__ - INFO - Sessão spark finalizada.
+2026-06-23 14:13:07 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-23 15:09:46 - root - INFO - Logging configurado.
+2026-06-23 15:09:46 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-23 15:09:46 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-23 15:09:55 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-23 15:10:00 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-23 15:10:01 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/pathinvalido/data-engineering-pyspark/data/input/data-csv-pedidos/data/pedidos. SQLSTATE: 42K03
+2026-06-23 15:10:01 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/pathinvalido/data-engineering-pyspark/data/input/data-csv-pedidos/data/pedidos. SQLSTATE: 42K03
+2026-06-23 15:10:01 - __main__ - INFO - Sessão spark finalizada.
+2026-06-23 15:10:01 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-23 15:11:24 - root - INFO - Logging configurado.
+2026-06-23 15:11:24 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-23 15:11:24 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-23 15:11:33 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-23 15:11:38 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-23 15:11:39 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-23 15:11:43 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-23 15:11:44 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-23 15:11:46 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-23 15:11:48 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-23 15:11:48 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-23 15:11:48 - pipeline.pipeline - INFO - Obtido o path de saída: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-23 15:11:52 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-23 15:11:52 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-23 15:11:52 - __main__ - INFO - Sessão spark finalizada.
+2026-06-23 15:11:52 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-23 15:12:31 - root - INFO - Logging configurado.
+2026-06-23 15:12:31 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-23 15:12:31 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-23 15:12:39 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-23 15:12:45 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-23 15:12:46 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-23 15:12:49 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-23 15:12:52 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-23 15:12:53 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-23 15:12:55 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-23 15:12:55 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-23 15:12:55 - pipeline.pipeline - INFO - Obtido o path de saída: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-23 15:12:59 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-23 15:12:59 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-23 15:13:00 - __main__ - INFO - Sessão spark finalizada.
+2026-06-23 15:13:00 - py4j.clientserver - INFO - Closing down clientserver connection

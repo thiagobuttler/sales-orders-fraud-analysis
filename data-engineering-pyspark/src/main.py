@@ -31,28 +31,34 @@ def configurar_logging():
     logging.info("Logging configurado.")
 
 def main():
-    
     # Cria uma instância de logger
     logger = logging.getLogger(__name__)
-
+    
     # Carregando configurações do arquivo yaml
     config = carregar_config()
-    
+        
     # Acessando campos do yaml para definição do nome do projeto spark
     app_name = config['spark']['app_name']
     logging.info(f"Obtido o app name: {app_name}")
     
-    # Iniciando a sessão spark
-    spark = SparkSessionManager.get_spark_session(app_name=app_name)
-            
-    # Raiz de composição (Composition Root)
-    data_handler = DataHandler(spark)
-    transformer = Transformation()
-    pipeline = Pipeline(data_handler, transformer)
-    pipeline.run(config=config)
+    try:
+        
+        # Iniciando a sessão spark
+        spark = SparkSessionManager.get_spark_session(app_name=app_name)
+                
+        # Raiz de composição (Composition Root)
+        data_handler = DataHandler(spark)
+        transformer = Transformation()
+        pipeline = Pipeline(data_handler, transformer)
+        pipeline.run(config=config)
     
-    spark.stop()
-    logger.info("Sessão spark finalizada.")
+    except Exception as e:
+        logging.error(f"FALHA CRÍTICA NO PIPELINE: {e}")
+    
+    finally:
+        if spark:
+            spark.stop()
+            logger.info("Sessão spark finalizada.")
 
 if __name__ == "__main__":
   configurar_logging()
