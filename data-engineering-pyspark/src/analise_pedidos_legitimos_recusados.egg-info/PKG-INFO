@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: analise_pedidos_legitimos_recusados
+Version: 0.1.0
+Summary: Pipeline de dados com PySpark para análise de pedidos de compras negados e que não foram identificados como fraudes.
+Author-email: thiagobuttler <rm372054@fiap.com.br>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pyspark==4.1.1
+Requires-Dist: pyyaml==6.0.3
+Provides-Extra: dev
+Requires-Dist: ruff==0.12.9; extra == "dev"
+Requires-Dist: black==25.1.0; extra == "dev"
+Requires-Dist: build==1.3.0; extra == "dev"
+
+[DATAENG] Análise com PySpark de compras negadas, não identificadas como fraudes

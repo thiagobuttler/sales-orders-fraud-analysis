@@ -125,3 +125,171 @@
 2026-06-23 15:12:59 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
 2026-06-23 15:13:00 - __main__ - INFO - Sessão spark finalizada.
 2026-06-23 15:13:00 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 20:36:46 - root - INFO - Logging configurado.
+2026-06-24 20:36:46 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 20:36:46 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 20:36:56 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 20:37:01 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-24 20:37:02 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-24 20:37:05 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-24 20:37:07 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-24 20:37:08 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-24 20:37:10 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-24 20:37:10 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-24 20:37:10 - pipeline.pipeline - INFO - Obtido o path de saída: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-24 20:37:14 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-24 20:37:14 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-24 20:37:14 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 20:37:14 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 21:08:22 - root - INFO - Logging configurado.
+2026-06-24 21:08:22 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 21:08:22 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 21:08:27 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 21:08:28 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/trabalho-final-data-eng-prog/data-engineering-pyspark/trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 21:08:28 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/trabalho-final-data-eng-prog/data-engineering-pyspark/trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 21:08:28 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 21:08:28 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 21:16:09 - root - INFO - Logging configurado.
+2026-06-24 21:16:09 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 21:16:09 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 21:16:14 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 21:16:19 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-24 21:16:20 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-24 21:16:23 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-24 21:16:25 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-24 21:16:27 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-24 21:16:28 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-24 21:16:28 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-24 21:16:28 - pipeline.pipeline - INFO - Obtido o path de saída: ./data/output
+2026-06-24 21:16:32 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./data/output
+2026-06-24 21:16:32 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-24 21:16:33 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 21:16:33 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 21:29:22 - root - INFO - Logging configurado.
+2026-06-24 21:29:22 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 21:29:22 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 21:29:29 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 21:29:30 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 21:29:30 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 21:29:30 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 21:29:30 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 21:33:42 - root - INFO - Logging configurado.
+2026-06-24 21:33:42 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 21:33:42 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 21:33:47 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 21:33:48 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/trabalho-final-data-eng-prog/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 21:33:48 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/trabalho-final-data-eng-prog/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 21:33:49 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 21:33:49 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 22:02:52 - root - INFO - Logging configurado.
+2026-06-24 22:02:52 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 22:02:52 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 22:02:59 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 22:03:00 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 22:03:00 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 22:03:01 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 22:03:01 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 22:05:51 - root - INFO - Logging configurado.
+2026-06-24 22:05:51 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 22:05:51 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 22:05:59 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 22:05:59 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 22:05:59 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 22:06:00 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 22:06:00 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 22:07:48 - root - INFO - Logging configurado.
+2026-06-24 22:07:48 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 22:07:48 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 22:07:56 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 22:07:57 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 22:07:57 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 22:07:58 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 22:07:58 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 22:29:01 - root - INFO - Logging configurado.
+2026-06-24 22:29:01 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 22:29:01 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 22:29:08 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 22:29:13 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-24 22:29:14 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-24 22:29:17 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-24 22:29:19 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-24 22:29:20 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-24 22:29:22 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-24 22:29:22 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-24 22:29:22 - pipeline.pipeline - INFO - Obtido o path de saída: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-24 22:29:25 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-24 22:29:25 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-24 22:29:26 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 22:29:26 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 23:15:05 - root - INFO - Logging configurado.
+2026-06-24 23:15:05 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 23:15:05 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 23:15:13 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 23:15:18 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-24 23:15:19 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-24 23:15:21 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-24 23:15:23 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-24 23:15:24 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-24 23:15:26 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-24 23:15:26 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-24 23:15:26 - pipeline.pipeline - INFO - Obtido o path de saída: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-24 23:15:29 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output
+2026-06-24 23:15:29 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-24 23:15:30 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 23:15:30 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 23:15:53 - root - INFO - Logging configurado.
+2026-06-24 23:15:53 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 23:15:53 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 23:15:58 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 23:15:59 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/trabalho-final-data-eng-prog/data-engineering-pyspark/trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 23:15:59 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/trabalho-final-data-eng-prog/data-engineering-pyspark/trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 23:15:59 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 23:15:59 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 23:18:48 - root - INFO - Logging configurado.
+2026-06-24 23:18:48 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 23:18:48 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 23:18:53 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 23:18:58 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-24 23:18:59 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-24 23:19:03 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-24 23:19:04 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-24 23:19:06 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-24 23:19:07 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-24 23:19:07 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-24 23:19:07 - pipeline.pipeline - INFO - Obtido o path de saída: ./data/output
+2026-06-24 23:19:11 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./data/output
+2026-06-24 23:19:11 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-24 23:19:11 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 23:19:11 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 23:19:32 - root - INFO - Logging configurado.
+2026-06-24 23:19:32 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 23:19:32 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 23:19:39 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 23:19:40 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 23:19:40 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 23:19:41 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 23:19:41 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 23:25:48 - root - INFO - Logging configurado.
+2026-06-24 23:25:48 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 23:25:48 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 23:25:54 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 23:25:58 - io_utils.data_handler - INFO - Dataframe pagamentos carregado. | Registros: 60096
+2026-06-24 23:25:59 - io_utils.data_handler - INFO - Dataframe pedidos carregado. | Registros: 60096
+2026-06-24 23:26:02 - pipeline.pipeline - INFO - Join entre pagamentos e pedidos realizado com sucesso! | Registros: 60096
+2026-06-24 23:26:04 - pipeline.pipeline - INFO - Filtro de pagamentos = false e fraude = false realizado com sucesso! | Registros: 2747
+2026-06-24 23:26:06 - pipeline.pipeline - INFO - Colunas status e fraude removidas com sucesso! | Registros: 2747
+2026-06-24 23:26:07 - pipeline.pipeline - INFO - Filtro de pedidos de 2025 realizado com sucesso! | Registros: 1473
+2026-06-24 23:26:07 - pipeline.pipeline - INFO - Dataframe ordenado por UF, forma de pagamento e data de criação do pedido com sucesso!
+2026-06-24 23:26:07 - pipeline.pipeline - INFO - Obtido o path de saída: ./data/output
+2026-06-24 23:26:11 - io_utils.data_handler - INFO - Dados salvos com sucesso em: ./data/output
+2026-06-24 23:26:11 - pipeline.pipeline - INFO - Pipeline concluído com sucesso!
+2026-06-24 23:26:11 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 23:26:11 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-06-24 23:28:16 - root - INFO - Logging configurado.
+2026-06-24 23:28:16 - config.settings - INFO - Informações do projeto carregadas.
+2026-06-24 23:28:16 - root - INFO - Obtido o app name: Analise de Pedidos Legitimos Recusados
+2026-06-24 23:28:23 - pipeline.pipeline - INFO - Pipeline iniciado...
+2026-06-24 23:28:24 - io_utils.data_handler - ERROR - Erro ao ler arquivo: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 23:28:24 - root - ERROR - FALHA CRÍTICA NO PIPELINE: [PATH_NOT_FOUND] Path does not exist: file:/home/ubuntu/environment/data/input/dataset-json-pagamentos/data/pagamentos. SQLSTATE: 42K03
+2026-06-24 23:28:25 - __main__ - INFO - Sessão spark finalizada.
+2026-06-24 23:28:25 - py4j.clientserver - INFO - Closing down clientserver connection

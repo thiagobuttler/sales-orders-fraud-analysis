@@ -2,9 +2,12 @@ spark:
     app_name: "Analise de Pedidos Legitimos Recusados"
     
 paths:
-    pagamentos: "./trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos/"
-    pedidos: "./trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/data-csv-pedidos/data/pedidos/"
-    output: "./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output"
+    #pagamentos: "./trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/dataset-json-pagamentos/data/pagamentos/"
+    #pedidos: "./trabalho-final-data-eng-prog/data-engineering-pyspark/data/input/data-csv-pedidos/data/pedidos/"
+    #output: "./trabalho-final-data-eng-prog/data-engineering-pyspark/data/output"
+    pagamentos: "./data/input/dataset-json-pagamentos/data/pagamentos/"
+    pedidos: "./data/input/data-csv-pedidos/data/pedidos/"
+    output: "./data/output"
     
 file_options:
     pagamentos_json:
