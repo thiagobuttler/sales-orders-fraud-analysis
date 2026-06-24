@@ -6,28 +6,26 @@ from config.settings import carregar_config
 config = carregar_config()
 
 # Acessando o campo de spark name do arquivo yamç
-spark_app_name: str = config['spark']['app_name']
+spark_app_name: str = config["spark"]["app_name"]
 
 logger = logging.getLogger(__name__)
+
 
 class SparkSessionManager:
     """
     Gerencia a criação e o acesso à sessão Spark
     """
-    
+
     logger.info("Carregando a sessão spark...")
-    
-    @staticmethod  
+
+    @staticmethod
     def get_spark_session(app_name: str = spark_app_name) -> SparkSession:
         """
         Cria e retorna uma sessão Spark.Cria
-        
+
         :param app_name: Nome da aplicação Spark.
         :return: Instância da SparkSession.
         """
-        return SparkSession.builder \
-            .appName(app_name) \
-            .master("local[*]") \
-            .getOrCreate()
-    
+        return SparkSession.builder.appName(app_name).master("local[*]").getOrCreate()
+
     logger.info("Sessão spark carregada com sucesso!")
