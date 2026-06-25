@@ -9,7 +9,7 @@ CONFIG_PATH = BASE_DIR / "config" / "settings.yaml"
 
 """
 def carregar_config(
-    path: str = "./trabalho-final-data-eng-prog/data-engineering-pyspark/config/settings.yaml",
+    path: str = "../config/settings.yaml",
 ) -> dict:
     "Carrega um arquivo de configuração YAML"
     with open(path, "r") as file:
@@ -17,10 +17,10 @@ def carregar_config(
 
     logger.info("Informações do projeto carregadas.")
     return config
-"""
 
+"""
 def carregar_config() -> dict:
-    """Carrega um arquivo de configuração YAML."""
+   # Carrega um arquivo de configuração YAML
     
     with open(CONFIG_PATH, "r") as file:
         config = yaml.safe_load(file)
