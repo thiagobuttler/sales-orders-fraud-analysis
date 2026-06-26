@@ -19,9 +19,11 @@ def carregar_config(
     return config
 
 """
+
+
 def carregar_config() -> dict:
-   # Carrega um arquivo de configuração YAML
-    
+    # Carrega um arquivo de configuração YAML
+
     with open(CONFIG_PATH, "r") as file:
         config = yaml.safe_load(file)
 

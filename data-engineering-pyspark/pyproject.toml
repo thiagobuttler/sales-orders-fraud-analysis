@@ -35,3 +35,12 @@ run-data-pipeline = "main:main"
 [tool.setuptools]
 package-dir = {"" = "src"}
 packages = {find = {where = ["src"]}}
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "unit: Testes unitários isolados (sem I/O externo)",
+    "integration: Testes de integração (orquestração entre componentes)"
+]
+addopts = "-v"
