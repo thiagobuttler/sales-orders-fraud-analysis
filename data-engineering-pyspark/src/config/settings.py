@@ -21,10 +21,8 @@ def carregar_config(
 """
 
 
-def carregar_config() -> dict:
-    # Carrega um arquivo de configuração YAML
-
-    with open(CONFIG_PATH, "r") as file:
+def carregar_config(path=CONFIG_PATH) -> dict:
+    with open(path, "r") as file:
         config = yaml.safe_load(file)
 
     logger.info("Informações do projeto carregadas.")
